@@ -1,0 +1,156 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url("../imagens/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(4px);
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.lotrs {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.cartao-lotr {
+    display: none;
+    max-width: 360px;
+    border-radius: 10px;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cartao-lotr.aberto {
+    display: block;
+}
+
+.cartao-lotr img {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.cartao-lotr .cartao-topo {
+    padding: 30px 40px 0;
+}
+
+.cartao-lotr .nome {
+    margin-bottom: 5px;
+}
+
+.cartao-lotr .detalhes {
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartao-lotr .cartao-topo .cartao-imagem img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.cartao-lotr .cartao-informacoes {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 30px 50px;
+    margin-top: -70px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.cartao-lotr .cartao-informacoes h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #6b727a;
+}
+
+.cartao-lotr .cartao-informacoes .descricao {
+    padding: 0 10px;
+    font-size: 15px;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.tipo-frodo {
+    background-color: #e0c158;
+}
+
+.tipo-sam {
+    background-color: rgb(35, 133, 64);
+}
+
+.tipo-gandalf {
+    background-color: #015C98;
+}
+
+.tipo-aragorn {
+    background-color: #C29791;
+}
+
+.tipo-legolas {
+    background-color: #49D0B0;
+}
+
+.tipo-gollum {
+    background-color: #BA68C8;
+}
+
+.listagem {
+    max-width: 200px;
+}
+
+.listagem .lotr img {
+    width: 25%;
+    border-radius: 50%;
+}
+
+.listagem .lotr {
+    background-color: #6b727a;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    min-height: 70px;
+
+    transition: 0.15 ease-in-out;
+}
+
+.listagem .lotr:hover {
+    transform: scale(1.05);
+}
+
+.listagem .lotr  span {
+    padding-right: 20px;
+}
+
+.listagem .lotr.ativo {
+    background-color: #f15000d2;
+}
